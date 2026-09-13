@@ -1,0 +1,25 @@
+# Netlify Build and Deployment Configuration for CraftEx Salt
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Single Page App (SPA) Redirect Rule to ensure smooth client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security & Performance Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache optimization for static product images
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

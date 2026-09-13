@@ -1,0 +1,6 @@
+{
+  "name": "CraftEx Salt",
+  "description": "Discover premium Himalayan salt products from CraftEx Salt. Explore our products and order easily through WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
